@@ -10,14 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int ft_putchar(char c) {
-	write(1, &c, 1);
-	return 0;
-}
-
 void show(int *range, int n) {
+
 	int	m;
 	int	must_show;
 
@@ -38,6 +32,7 @@ void show(int *range, int n) {
 }
 
 void ft_print_combn(int n) {
+	
 	int	m;
 	int	range[10];
 

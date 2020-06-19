@@ -10,14 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-
-int ft_putchar(char c) {
-	write(1, &c, 1);
-	return 0;
-}
-
 void show(int number) {
 	
 	if (number > 9) {
@@ -59,7 +51,5 @@ void ft_print_comb2(void) {
         } 
 		n++;
 	}
-
-    
 
 }
