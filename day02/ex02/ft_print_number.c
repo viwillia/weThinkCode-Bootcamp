@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_print_reverse_alphabet(void) {
+void ft_print_number(void) {
     char number;
 
     number = '0';
