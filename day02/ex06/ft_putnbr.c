@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putnbr(int number) {
+void ft_putnbr(int nb) {
 	
-    unsigned int _number;
+    unsigned int number;
 
-	if (number < 0) {
+	if (nb < 0) {
 		ft_putchar('-');
-		_number = number * -1;
+		number = nb * -1;
 	} else {
-		_number = number;
+		number = nb;
     }
 
-	if (_number >= 10) {
-		ft_putnbr(_number / 10);
+	if (number >= 10) {
+		ft_putnbr(number / 10);
     }
-	ft_putchar((_number % 10) + 48);
+	ft_putchar((number % 10) + 48);
 
 }
