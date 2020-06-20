@@ -9,3 +9,17 @@
 /*   Updated: 2020/06/19 13:00:51 by viwillia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int ft_strlen(char *str)
+{
+    int length;
+    int n;
+
+    n = 0;
+    while(str[n] != '\0')
+    {
+        length++;
+        n++;
+    }
+    return length;
+}
