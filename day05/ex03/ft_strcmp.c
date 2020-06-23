@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 char *ft_strstr(char *str, char *to_find)
 {
     char *substr;
@@ -14,7 +17,9 @@ char *ft_strstr(char *str, char *to_find)
     while(str[m] != '\0')
     {
         if(str[m] == to_find[n])
+        {
             substr[n++] = str[m];
+        }
         m++;
     }
 
@@ -22,4 +27,27 @@ char *ft_strstr(char *str, char *to_find)
         return NULL;
 
     return substr;
+}
+
+int ft_strcmp(char *s1, char *s2)
+{
+    char *first;
+    char *second;
+
+    first = ft_strstr(s1, s2);
+    second = ft_strstr(s2, s1);
+    
+    if(first == NULL)
+        return -1;
+
+    else if(second == NULL)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    printf("%d\n", ft_strcmp("Vicario", "Baker"));
+    return 0;
 }
