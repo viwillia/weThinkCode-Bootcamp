@@ -1,21 +1,23 @@
-#include <stdio.h>
-
 char *ft_strupcase(char *str)
 {
-    int i;
+    int length;
+    char *upper;
 
-    i = 0;
-    while(str[i] != '\0')
+    length = 0;
+    while(str[length] != '\0')
+        length++;
+
+    upper = malloc(length * sizeof(char));
+    length = 0;
+    while(str[length] != '\0')
     {
-        str[i] = str[i] - 32;
-        i++;
-    }
-    printf("%c\n", str);
-    return str;
-}
+        upper[length] = str[length];
 
-int main()
-{
-    printf("%d\n", (int) 'R');
-    return 0;
+        if(str[length] >= 97 && str[length] <= 122)
+            upper[length] = str[length] - 32;
+
+        length++;
+    }
+    upper[length] = '\0';
+    return upper;
 }
