@@ -19,7 +19,7 @@ char *ft_strstr(char *str, char *to_find)
     }
 
     if(to_find[length_substring - 1] != substr[length_substring - 1])
-        return NULL;
+        return 0;
 
     return substr;
 }
