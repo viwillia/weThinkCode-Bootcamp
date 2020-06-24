@@ -24,7 +24,7 @@ char *ft_strstr(char *str, char *to_find)
     }
 
     if(to_find[length_substring - 1] != substr[length_substring - 1])
-        return NULL;
+        return 0;
 
     return substr;
 }
@@ -37,10 +37,10 @@ int ft_strcmp(char *s1, char *s2)
     first = ft_strstr(s1, s2);
     second = ft_strstr(s2, s1);
     
-    if(first == NULL)
+    if(first == 0)
         return -1;
 
-    else if(second == NULL)
+    else if(second == 0)
         return 1;
     else
         return 0;
