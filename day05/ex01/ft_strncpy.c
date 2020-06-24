@@ -9,5 +9,6 @@ char *ft_strncpy(char *dest, char *src, unsigned int n)
         dest[i] = src[i];
         i++;
     }
+    dest[n] = '\0';
     return dest;
 }
