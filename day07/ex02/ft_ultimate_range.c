@@ -13,5 +13,25 @@
 
 int ft_ultimate_range(int **range, int min, int max)
 {
+    int index;
+    int length;
+    char *table;
+
+    if(min >= max)
+    {
+        *range = NULL;
+        return 0;
+    }
+    length = max - min;
+    table = malloc(length * sizeof(int));
     
+    index = 0;
+    while(min < max)
+    {
+        table[index] = min;
+        min++;
+        index++;
+    }
+    *range = table;
+    return index;
 }
