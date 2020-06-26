@@ -13,5 +13,23 @@
 
 char *ft_strdup(char *src)
 {
+    int length;
+    int index;
+    char* duplicate;
 
+    length = 0;
+    while(src[length] != '\0')
+        length++;
+
+    duplicate = malloc(++length * sizeof(char));
+
+    index = 0;
+    while(index < length)
+    {
+        duplicate[index] = src[index];
+        index++;
+    }
+    duplicate[index] = '\0';
+
+    return duplicate;
 }
