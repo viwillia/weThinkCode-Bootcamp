@@ -46,7 +46,7 @@ int	ft_word_count(char *string)
 	return ++count;
 }
 
-char **ft_split_whitespaces(char *string)
+char **ft_split_whitespaces(char *str)
 {
     char **table;
 	int index;
@@ -56,24 +56,24 @@ char **ft_split_whitespaces(char *string)
 
 	index = 0;
 	j = 0;
-	table = malloc(ft_word_count(string));
-	while (string[j])
+	table = malloc(ft_word_count(str));
+	while (str[j])
 	{
 		k = 1;
-		while (is_terminating_character(string[j]))
+		while (is_terminating_character(str[j]))
             j++;
 
-    	length = ft_word_length(j, string);
+    	length = ft_word_length(j, str);
 		table[index] = malloc(++length * sizeof(char*));
-		while (!is_terminating_character(string[j]))
+		while (!is_terminating_character(str[j]))
 		{
-			table[index][k - 1] = string[j++];
+			table[index][k - 1] = str[j++];
 			k++;
 		}
 
 		table[index++][k - 1] = '\0';
 	}
-    
+
 	table[index] = 0;
 	return table;
 }
