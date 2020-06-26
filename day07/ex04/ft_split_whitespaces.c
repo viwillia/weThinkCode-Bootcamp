@@ -9,8 +9,6 @@
 /*   Updated: 2020/06/26 14:55:08 by viwillia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
 
 int is_terminating_character(char c)
 {
@@ -72,8 +70,10 @@ char **ft_split_whitespaces(char *string)
 			table[index][k - 1] = string[j++];
 			k++;
 		}
+
 		table[index++][k - 1] = '\0';
 	}
+    
 	table[index] = 0;
 	return table;
 }
