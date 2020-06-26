@@ -61,17 +61,22 @@ char **ft_split_whitespaces(char *str)
 	{
 		k = 1;
 		while (is_terminating_character(str[j]))
+        {
             j++;
+        }
 
     	length = ft_word_length(j, str);
-		table[index] = malloc(++length * sizeof(char*));
+        length = length + 1;
+		table[index] = malloc(length * sizeof(char*));
 		while (!is_terminating_character(str[j]))
 		{
-			table[index][k - 1] = str[j++];
+			table[index][k - 1] = str[j];
+            j++;
 			k++;
 		}
 
-		table[index++][k - 1] = '\0';
+		table[index][k - 1] = '\0';
+        index++;
 	}
 
 	table[index] = 0;
